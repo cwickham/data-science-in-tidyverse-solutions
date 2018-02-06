@@ -125,9 +125,17 @@ unnest(big_slope, data) %>%
 
 1. Create your own copy of `gapminder_nested` and then add one more list column: `output` which contains the output of `augment()` for each model.
 
-2.  Plot the residuals against time for the countries with large r-squared.
+2.  Plot the residuals against time for the countries with small r-squared.
 
 ```{r}
+charlotte_gapminder <- gapminder_nested
+
+charlotte_gapminder %>%
+  mutate(output = model %>% map(augment)) %>%
+  unnest(output) %>%
+  filter(r.squared < 0.5) %>%
+  ggplot() + 
+    geom_line(aes(year, .resid, color = country))
 
 ```
 
