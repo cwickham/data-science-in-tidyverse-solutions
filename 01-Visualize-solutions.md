@@ -6,24 +6,37 @@ Visualize Data (solutions)
 library(tidyverse)
 ```
 
+    ## ── Attaching packages ────────────────────────────────── tidyverse 1.2.1 ──
+
+    ## ✔ ggplot2 2.2.1     ✔ readr   1.1.1
+    ## ✔ tibble  1.4.2     ✔ dplyr   0.7.4
+    ## ✔ tidyr   0.7.2     ✔ stringr 1.2.0
+    ## ✔ ggplot2 2.2.1     ✔ forcats 0.2.0
+
+    ## Warning: package 'tibble' was built under R version 3.4.3
+
+    ## ── Conflicts ───────────────────────────────────── tidyverse_conflicts() ──
+    ## ✖ dplyr::filter() masks stats::filter()
+    ## ✖ dplyr::lag()    masks stats::lag()
+
 ``` r
 mpg
 ```
 
     ## # A tibble: 234 x 11
-    ##    manufac… model   displ  year   cyl trans  drv     cty   hwy fl    class
-    ##    <chr>    <chr>   <dbl> <int> <int> <chr>  <chr> <int> <int> <chr> <chr>
-    ##  1 audi     a4       1.80  1999     4 auto(… f        18    29 p     comp…
-    ##  2 audi     a4       1.80  1999     4 manua… f        21    29 p     comp…
-    ##  3 audi     a4       2.00  2008     4 manua… f        20    31 p     comp…
-    ##  4 audi     a4       2.00  2008     4 auto(… f        21    30 p     comp…
-    ##  5 audi     a4       2.80  1999     6 auto(… f        16    26 p     comp…
-    ##  6 audi     a4       2.80  1999     6 manua… f        18    26 p     comp…
-    ##  7 audi     a4       3.10  2008     6 auto(… f        18    27 p     comp…
-    ##  8 audi     a4 qua…  1.80  1999     4 manua… 4        18    26 p     comp…
-    ##  9 audi     a4 qua…  1.80  1999     4 auto(… 4        16    25 p     comp…
-    ## 10 audi     a4 qua…  2.00  2008     4 manua… 4        20    28 p     comp…
-    ## # ... with 224 more rows
+    ##    manufacturer model    displ  year   cyl trans   drv     cty   hwy fl   
+    ##    <chr>        <chr>    <dbl> <int> <int> <chr>   <chr> <int> <int> <chr>
+    ##  1 audi         a4        1.80  1999     4 auto(l… f        18    29 p    
+    ##  2 audi         a4        1.80  1999     4 manual… f        21    29 p    
+    ##  3 audi         a4        2.00  2008     4 manual… f        20    31 p    
+    ##  4 audi         a4        2.00  2008     4 auto(a… f        21    30 p    
+    ##  5 audi         a4        2.80  1999     6 auto(l… f        16    26 p    
+    ##  6 audi         a4        2.80  1999     6 manual… f        18    26 p    
+    ##  7 audi         a4        3.10  2008     6 auto(a… f        18    27 p    
+    ##  8 audi         a4 quat…  1.80  1999     4 manual… 4        18    26 p    
+    ##  9 audi         a4 quat…  1.80  1999     4 auto(l… 4        16    25 p    
+    ## 10 audi         a4 quat…  2.00  2008     4 manual… 4        20    28 p    
+    ## # ... with 224 more rows, and 1 more variable: class <chr>
 
 Quiz
 ----

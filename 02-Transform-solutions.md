@@ -27,7 +27,7 @@ gapminder
 
     ## # A tibble: 1,704 x 6
     ##    country     continent  year lifeExp      pop gdpPercap
-    ##    <fctr>      <fctr>    <int>   <dbl>    <int>     <dbl>
+    ##    <fct>       <fct>     <int>   <dbl>    <int>     <dbl>
     ##  1 Afghanistan Asia       1952    28.8  8425333       779
     ##  2 Afghanistan Asia       1957    30.3  9240934       821
     ##  3 Afghanistan Asia       1962    32.0 10267083       853
@@ -53,7 +53,7 @@ filter(gapminder, country == "United States")
 
     ## # A tibble: 12 x 6
     ##    country       continent  year lifeExp       pop gdpPercap
-    ##    <fctr>        <fctr>    <int>   <dbl>     <int>     <dbl>
+    ##    <fct>         <fct>     <int>   <dbl>     <int>     <dbl>
     ##  1 United States Americas   1952    68.4 157553000     13990
     ##  2 United States Americas   1957    69.5 171984000     14847
     ##  3 United States Americas   1962    70.2 186538000     16173
@@ -75,7 +75,7 @@ filter(gapminder, continent == "Oceania")
 
     ## # A tibble: 24 x 6
     ##    country   continent  year lifeExp      pop gdpPercap
-    ##    <fctr>    <fctr>    <int>   <dbl>    <int>     <dbl>
+    ##    <fct>     <fct>     <int>   <dbl>    <int>     <dbl>
     ##  1 Australia Oceania    1952    69.1  8691212     10040
     ##  2 Australia Oceania    1957    70.3  9712569     10950
     ##  3 Australia Oceania    1962    70.9 10794968     12217
@@ -96,7 +96,7 @@ filter(gapminder, lifeExp > 82)
 
     ## # A tibble: 2 x 6
     ##   country          continent  year lifeExp       pop gdpPercap
-    ##   <fctr>           <fctr>    <int>   <dbl>     <int>     <dbl>
+    ##   <fct>            <fct>     <int>   <dbl>     <int>     <dbl>
     ## 1 Hong Kong, China Asia       2007    82.2   6980412     39725
     ## 2 Japan            Asia       2007    82.6 127467972     31656
 
@@ -113,7 +113,7 @@ filter(gapminder, country == "United States", year < 1970)
 
     ## # A tibble: 4 x 6
     ##   country       continent  year lifeExp       pop gdpPercap
-    ##   <fctr>        <fctr>    <int>   <dbl>     <int>     <dbl>
+    ##   <fct>         <fct>     <int>   <dbl>     <int>     <dbl>
     ## 1 United States Americas   1952    68.4 157553000     13990
     ## 2 United States Americas   1957    69.5 171984000     14847
     ## 3 United States Americas   1962    70.2 186538000     16173
@@ -127,7 +127,7 @@ filter(gapminder, year == 2007, lifeExp < 50)
 
     ## # A tibble: 19 x 6
     ##    country                  continent  year lifeExp       pop gdpPercap
-    ##    <fctr>                   <fctr>    <int>   <dbl>     <int>     <dbl>
+    ##    <fct>                    <fct>     <int>   <dbl>     <int>     <dbl>
     ##  1 Afghanistan              Asia       2007    43.8  31889923       975
     ##  2 Angola                   Africa     2007    42.7  12420476      4797
     ##  3 Burundi                  Africa     2007    49.6   8390505       430
@@ -156,7 +156,7 @@ filter(gapminder, country %in% c("Canada", "New Zealand", "United States"))
 
     ## # A tibble: 36 x 6
     ##    country continent  year lifeExp      pop gdpPercap
-    ##    <fctr>  <fctr>    <int>   <dbl>    <int>     <dbl>
+    ##    <fct>   <fct>     <int>   <dbl>    <int>     <dbl>
     ##  1 Canada  Americas   1952    68.8 14785584     11367
     ##  2 Canada  Americas   1957    70.0 17010154     12490
     ##  3 Canada  Americas   1962    71.3 18985849     13462
@@ -193,7 +193,7 @@ arrange(gapminder, pop)
 
     ## # A tibble: 1,704 x 6
     ##    country               continent  year lifeExp   pop gdpPercap
-    ##    <fctr>                <fctr>    <int>   <dbl> <int>     <dbl>
+    ##    <fct>                 <fct>     <int>   <dbl> <int>     <dbl>
     ##  1 Sao Tome and Principe Africa     1952    46.5 60011       880
     ##  2 Sao Tome and Principe Africa     1957    48.9 61325       861
     ##  3 Djibouti              Africa     1952    34.8 63149      2670
@@ -214,7 +214,7 @@ arrange(gapminder, desc(gdpPercap))
 
     ## # A tibble: 1,704 x 6
     ##    country   continent  year lifeExp     pop gdpPercap
-    ##    <fctr>    <fctr>    <int>   <dbl>   <int>     <dbl>
+    ##    <fct>     <fct>     <int>   <dbl>   <int>     <dbl>
     ##  1 Kuwait    Asia       1957    58.0  212846    113523
     ##  2 Kuwait    Asia       1972    67.7  841934    109348
     ##  3 Kuwait    Asia       1952    55.6  160000    108382
@@ -247,7 +247,7 @@ gapminder %>%
 
     ## # A tibble: 1,704 x 7
     ##    country     continent  year lifeExp      pop gdpPercap size 
-    ##    <fctr>      <fctr>    <int>   <dbl>    <int>     <dbl> <chr>
+    ##    <fct>       <fct>     <int>   <dbl>    <int>     <dbl> <chr>
     ##  1 Afghanistan Asia       1952    28.8  8425333       779 small
     ##  2 Afghanistan Asia       1957    30.3  9240934       821 small
     ##  3 Afghanistan Asia       1962    32.0 10267083       853 large
@@ -274,7 +274,7 @@ gapminder %>%
 
     ## # A tibble: 1,704 x 7
     ##    country     continent  year lifeExp      pop gdpPercap   total_pop
-    ##    <fctr>      <fctr>    <int>   <dbl>    <int>     <dbl>       <dbl>
+    ##    <fct>       <fct>     <int>   <dbl>    <int>     <dbl>       <dbl>
     ##  1 Afghanistan Asia       1952    28.8  8425333       779 50440465801
     ##  2 Afghanistan Asia       1957    30.3  9240934       821 50440465801
     ##  3 Afghanistan Asia       1962    32.0 10267083       853 50440465801
@@ -311,7 +311,7 @@ gapminder %>%
 
     ## # A tibble: 1,704 x 7
     ##    country     continent  year lifeExp      pop gdpPercap prev_lifeExp
-    ##    <fctr>      <fctr>    <int>   <dbl>    <int>     <dbl>        <dbl>
+    ##    <fct>       <fct>     <int>   <dbl>    <int>     <dbl>        <dbl>
     ##  1 Afghanistan Asia       1952    28.8  8425333       779         NA  
     ##  2 Afghanistan Asia       1957    30.3  9240934       821         28.8
     ##  3 Afghanistan Asia       1962    32.0 10267083       853         30.3
@@ -381,7 +381,7 @@ gapminder %>%
 
     ## # A tibble: 5 x 2
     ##   continent med_life_exp
-    ##   <fctr>           <dbl>
+    ##   <fct>            <dbl>
     ## 1 Africa            52.9
     ## 2 Americas          72.9
     ## 3 Asia              72.4
@@ -415,19 +415,19 @@ gapminder %>%
 ```
 
     ## # A tibble: 1,704 x 8
-    ## # Groups: country [142]
-    ##    country     continent  year lifeExp       pop gdpPercap prev_lif…  jump
-    ##    <fctr>      <fctr>    <int>   <dbl>     <int>     <dbl>     <dbl> <dbl>
-    ##  1 Cambodia    Asia       1982    51.0   7272485       624      31.2 19.7 
-    ##  2 China       Asia       1967    58.4 754550000       613      44.5 13.9 
-    ##  3 Rwanda      Africa     1997    36.1   7212583       590      23.6 12.5 
-    ##  4 Rwanda      Africa     2002    43.4   7852401       786      36.1  7.33
-    ##  5 Mauritius   Africa     1957    58.1    609816      2034      51.0  7.10
-    ##  6 Bulgaria    Europe     1957    66.6   7651254      3009      59.6  7.01
-    ##  7 El Salvador Americas   1987    63.2   4842194      4140      56.6  6.55
-    ##  8 China       Asia       1957    50.5 637408000       576      44.0  6.55
-    ##  9 Myanmar     Asia       1957    41.9  21731844       350      36.3  5.59
-    ## 10 Albania     Europe     1962    64.8   1728137      2313      59.3  5.54
+    ## # Groups:   country [142]
+    ##    country     continent  year lifeExp    pop gdpPercap prev_lifeExp  jump
+    ##    <fct>       <fct>     <int>   <dbl>  <int>     <dbl>        <dbl> <dbl>
+    ##  1 Cambodia    Asia       1982    51.0 7.27e⁶       624         31.2 19.7 
+    ##  2 China       Asia       1967    58.4 7.55e⁸       613         44.5 13.9 
+    ##  3 Rwanda      Africa     1997    36.1 7.21e⁶       590         23.6 12.5 
+    ##  4 Rwanda      Africa     2002    43.4 7.85e⁶       786         36.1  7.33
+    ##  5 Mauritius   Africa     1957    58.1 6.10e⁵      2034         51.0  7.10
+    ##  6 Bulgaria    Europe     1957    66.6 7.65e⁶      3009         59.6  7.01
+    ##  7 El Salvador Americas   1987    63.2 4.84e⁶      4140         56.6  6.55
+    ##  8 China       Asia       1957    50.5 6.37e⁸       576         44.0  6.55
+    ##  9 Myanmar     Asia       1957    41.9 2.17e⁷       350         36.3  5.59
+    ## 10 Albania     Europe     1962    64.8 1.73e⁶      2313         59.3  5.54
     ## # ... with 1,694 more rows
 
 Your Turn 11
@@ -445,18 +445,18 @@ gapminder %>% left_join(country_codes)
     ## into character vector
 
     ## # A tibble: 1,704 x 8
-    ##    country     continent  year lifeExp      pop gdpPercap iso_alpha iso_n…
-    ##    <chr>       <fctr>    <int>   <dbl>    <int>     <dbl> <chr>      <int>
-    ##  1 Afghanistan Asia       1952    28.8  8425333       779 AFG            4
-    ##  2 Afghanistan Asia       1957    30.3  9240934       821 AFG            4
-    ##  3 Afghanistan Asia       1962    32.0 10267083       853 AFG            4
-    ##  4 Afghanistan Asia       1967    34.0 11537966       836 AFG            4
-    ##  5 Afghanistan Asia       1972    36.1 13079460       740 AFG            4
-    ##  6 Afghanistan Asia       1977    38.4 14880372       786 AFG            4
-    ##  7 Afghanistan Asia       1982    39.9 12881816       978 AFG            4
-    ##  8 Afghanistan Asia       1987    40.8 13867957       852 AFG            4
-    ##  9 Afghanistan Asia       1992    41.7 16317921       649 AFG            4
-    ## 10 Afghanistan Asia       1997    41.8 22227415       635 AFG            4
+    ##    country     continent  year lifeExp     pop gdpPercap iso_alpha iso_num
+    ##    <chr>       <fct>     <int>   <dbl>   <int>     <dbl> <chr>       <int>
+    ##  1 Afghanistan Asia       1952    28.8  8.43e⁶       779 AFG             4
+    ##  2 Afghanistan Asia       1957    30.3  9.24e⁶       821 AFG             4
+    ##  3 Afghanistan Asia       1962    32.0  1.03e⁷       853 AFG             4
+    ##  4 Afghanistan Asia       1967    34.0  1.15e⁷       836 AFG             4
+    ##  5 Afghanistan Asia       1972    36.1  1.31e⁷       740 AFG             4
+    ##  6 Afghanistan Asia       1977    38.4  1.49e⁷       786 AFG             4
+    ##  7 Afghanistan Asia       1982    39.9  1.29e⁷       978 AFG             4
+    ##  8 Afghanistan Asia       1987    40.8  1.39e⁷       852 AFG             4
+    ##  9 Afghanistan Asia       1992    41.7  1.63e⁷       649 AFG             4
+    ## 10 Afghanistan Asia       1997    41.8  2.22e⁷       635 AFG             4
     ## # ... with 1,694 more rows
 
 **Challenge**: Which codes in country\_codes have no matches in gapminder?

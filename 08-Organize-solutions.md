@@ -62,7 +62,7 @@ gapminder_sm["country"]
 
     ## # A tibble: 5 x 1
     ##   country    
-    ##   <fctr>     
+    ##   <fct>      
     ## 1 Afghanistan
     ## 2 Afghanistan
     ## 3 Afghanistan
@@ -123,7 +123,7 @@ gapminder_nested %>%
 
     ## # A tibble: 13 x 4
     ##    country                  data              model    r.squared
-    ##    <fctr>                   <list>            <list>       <dbl>
+    ##    <fct>                    <list>            <list>       <dbl>
     ##  1 Botswana                 <tibble [12 × 5]> <S3: lm>    0.0340
     ##  2 Central African Republic <tibble [12 × 5]> <S3: lm>    0.493 
     ##  3 Congo, Dem. Rep.         <tibble [12 × 5]> <S3: lm>    0.348 
@@ -171,7 +171,20 @@ Your Turn 4
 
 1.  Create your own copy of `gapminder_nested` and then add one more list column: `output` which contains the output of `augment()` for each model.
 
-2.  Plot the residuals against time for the countries with large r-squared.
+2.  Plot the residuals against time for the countries with small r-squared.
+
+``` r
+charlotte_gapminder <- gapminder_nested
+
+charlotte_gapminder %>%
+  mutate(output = model %>% map(augment)) %>%
+  unnest(output) %>%
+  filter(r.squared < 0.5) %>%
+  ggplot() + 
+    geom_line(aes(year, .resid, color = country))
+```
+
+![](08-Organize-solutions_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
 Take away
 =========

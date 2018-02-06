@@ -25,7 +25,7 @@ What kind of object is `mod`? Why are models stored as this kind of object?
 
 ``` r
 mod <- lm(price ~ carat + cut + color + clarity, data = diamonds)
-View(mod)
+# View(mod)
 ```
 
 `mod` is a list. A list is used because we need to store lots of heterogeneous information.

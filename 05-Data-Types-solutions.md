@@ -10,6 +10,10 @@ library(lubridate)
     ## 
     ## Attaching package: 'lubridate'
 
+    ## The following object is masked from 'package:here':
+    ## 
+    ##     here
+
     ## The following object is masked from 'package:base':
     ## 
     ##     date
@@ -38,7 +42,7 @@ gss_cat %>%
 
     ## # A tibble: 6 x 2
     ##   marital       avg_tv
-    ##   <fctr>         <dbl>
+    ##   <fct>          <dbl>
     ## 1 No answer         NA
     ## 2 Never married     NA
     ## 3 Separated         NA
@@ -56,18 +60,18 @@ gss_cat
 ```
 
     ## # A tibble: 21,483 x 9
-    ##     year marital         age race   rincome        part… relig denom tvho…
-    ##    <int> <fctr>        <int> <fctr> <fctr>         <fct> <fct> <fct> <int>
-    ##  1  2000 Never married    26 White  $8000 to 9999  Ind,… Prot… Sout…    12
-    ##  2  2000 Divorced         48 White  $8000 to 9999  Not … Prot… Bapt…    NA
-    ##  3  2000 Widowed          67 White  Not applicable Inde… Prot… No d…     2
-    ##  4  2000 Never married    39 White  Not applicable Ind,… Orth… Not …     4
-    ##  5  2000 Divorced         25 White  Not applicable Not … None  Not …     1
-    ##  6  2000 Married          25 White  $20000 - 24999 Stro… Prot… Sout…    NA
-    ##  7  2000 Never married    36 White  $25000 or more Not … Chri… Not …     3
-    ##  8  2000 Divorced         44 White  $7000 to 7999  Ind,… Prot… Luth…    NA
-    ##  9  2000 Married          44 White  $25000 or more Not … Prot… Other     0
-    ## 10  2000 Married          47 White  $25000 or more Stro… Prot… Sout…     3
+    ##     year marital         age race  rincome  partyid  relig  denom  tvhours
+    ##    <int> <fct>         <int> <fct> <fct>    <fct>    <fct>  <fct>    <int>
+    ##  1  2000 Never married    26 White $8000 t… Ind,nea… Prote… South…      12
+    ##  2  2000 Divorced         48 White $8000 t… Not str… Prote… Bapti…      NA
+    ##  3  2000 Widowed          67 White Not app… Indepen… Prote… No de…       2
+    ##  4  2000 Never married    39 White Not app… Ind,nea… Ortho… Not a…       4
+    ##  5  2000 Divorced         25 White Not app… Not str… None   Not a…       1
+    ##  6  2000 Married          25 White $20000 … Strong … Prote… South…      NA
+    ##  7  2000 Never married    36 White $25000 … Not str… Chris… Not a…       3
+    ##  8  2000 Divorced         44 White $7000 t… Ind,nea… Prote… Luthe…      NA
+    ##  9  2000 Married          44 White $25000 … Not str… Prote… Other        0
+    ## 10  2000 Married          47 White $25000 … Strong … Prote… South…       3
     ## # ... with 21,473 more rows
 
 The `marital` variable is a **factor**.
